@@ -1,0 +1,14 @@
+# robots.txt — Men's Designer Studio Vellore
+# https://mensdesignerstudio.in/
+ 
+User-agent: *
+Allow: /
+ 
+# Block access to any future admin or config folders
+Disallow: /admin/
+Disallow: /config/
+Disallow: /.env
+ 
+# Sitemap location
+Sitemap: https://mensdesignerstudio.in/sitemap.xml
+ 
