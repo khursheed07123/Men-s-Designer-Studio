@@ -12,6 +12,7 @@
 document.addEventListener('DOMContentLoaded', () => {
  
   /* ── STEP 1: HERO ── */
+  initHeroSlideshow();    // rotating landing page images
   initTypewriter();       // typewriter phrases in hero
   initHeroParallax();     // subtle parallax scroll on hero
   initButtonRipple();     // gold ripple on all buttons
@@ -23,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── STEP 3: ANIMATIONS ── */
   initScrollReveal();     // enhanced reveal (replaces old one — call only once)
   initTitleShimmer();     // gold shimmer sweep on section titles
-  initCursorTrail();      // gold cursor dot + ring (desktop only)
   initSectionDividers();  // animated gold dividers between sections
   initServiceTilt();      // 3D tilt on service cards
   initParticleBurst();    // gold particle burst on CTA clicks
@@ -440,6 +440,39 @@ document.head.appendChild(styleTag);
    in your script.js
    ───────────────────────────────────────── */
  
+function initHeroSlideshow() {
+  const slideshow = document.getElementById('heroSlideshow');
+  if (!slideshow) return;
+
+  const images = [
+    'i1 (1).png',
+    'i2.png',
+    'i3.png',
+    'i4.png',
+    'i5.png',
+    'i6.png'
+  ];
+
+  images.forEach((src, index) => {
+    const slide = document.createElement('div');
+    slide.className = `hero-slide${index === 0 ? ' active' : ''}`;
+    slide.style.backgroundImage = `url("${src}")`;
+    slideshow.appendChild(slide);
+  });
+
+  const slides = slideshow.querySelectorAll('.hero-slide');
+  if (slides.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let current = 0;
+  const interval = window.setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 4500);
+
+  window.addEventListener('beforeunload', () => window.clearInterval(interval));
+}
+
 /* ── A. TYPEWRITER EFFECT ── */
 function initTypewriter() {
   const el = document.getElementById('heroTypewriter');
@@ -1102,7 +1135,6 @@ function initParticleBurst() {
 /*
   initTitleShimmer();
   initScrollReveal();      // replaces old initScrollReveal()
-  initCursorTrail();
   initSectionDividers();
   initServiceTilt();
   initParticleBurst();
