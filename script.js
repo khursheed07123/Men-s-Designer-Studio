@@ -445,7 +445,7 @@ function initHeroSlideshow() {
   if (!slideshow) return;
 
   const images = [
-    'i1 (1).png',
+    'i1.png',
     'i2.png',
     'i3.png',
     'i4.png',
@@ -747,7 +747,7 @@ function initLightbox() {
         const img = document.createElement('img');
         img.src   = realImg.src;
         img.alt   = name;
-        img.style.cssText = 'width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.3s ease;';
+        img.style.cssText = 'width:100%; height:100%; object-fit:contain; display:block; transition:transform 0.3s ease;';
         imageWrap.appendChild(img);
         // Lazy-load fallback
         img.addEventListener('error', () => {
@@ -1070,7 +1070,7 @@ function initServiceTilt() {
  
     card.addEventListener('mouseleave', () => {
       card.style.transform = '';
-      card.style.transition = 'transform 0.35s cubic-bezier(0.34, 1.3, 0.64, 1), background 0.25s';
+      card.style.transition = 'transform 0.35s cubic-bezier(0.34, 1.3, 0.64, 1), border-color 0.25s, box-shadow 0.25s, background 0.25s';
     });
   });
 }
