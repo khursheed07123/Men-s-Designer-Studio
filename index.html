@@ -212,6 +212,8 @@
   <!-- ───────── HERO ───────── -->
 <section class="hero hero-images-only" id="home">
   <div class="hero-slideshow" id="heroSlideshow" aria-hidden="true"></div>
+  <button class="hero-prev" id="heroPrev" aria-label="Previous image">&#8592;</button>
+  <button class="hero-next" id="heroNext" aria-label="Next image">&#8594;</button>
   <div class="hero-grain" aria-hidden="true"></div>
 </section>
 
@@ -235,39 +237,133 @@
     </div>
   </div>
 
-  <!-- ───────── ABOUT ───────── -->
-  <section class="about section" id="about">
-    <div class="about-inner container">
+  <!-- ───────── FEATURES ───────── -->
+  <section class="features" id="about">
+    <div class="features-header">
+      <h2 class="features-title">Crafting Confidence, One Stitch at a Time</h2>
+      <p class="features-sub">From premium fabrics to impeccable tailoring, Men's Designer Studio makes the perfect gentleman by crafting custom suits that exude elegance, confidence, and timeless style for every occasion.</p>
+    </div>
 
-      <div class="about-img reveal">
-        <!--
-          Replace the src below with the actual studio/model photo.
-          Recommended size: 800×1000px, portrait orientation.
-          Example: src="assets/about-photo.png"
-        -->
-        <img src="assets/about-photo.png
-        " alt="Men's Designer Studio — Bespoke Tailoring" class="about-photo" />
-        <div class="about-badge-floating">Est. in Vellore</div>
-      </div>
+    <div class="features-inner">
 
-      <div class="about-text reveal">
-        <p class="eyebrow">Our Story</p>
-        <h2 class="section-title">Where Precision Meets Elegance</h2>
-        <div class="gold-line"></div>
-        <p class="section-sub">Men's Designer Studio is Vellore's premier bespoke tailoring destination. We believe a well-fitted suit isn't just clothing — it's a statement of who you are. From your first consultation to your final fitting, every detail is crafted with care and precision.</p>
-        <p class="section-sub" style="margin-top:1rem;">Whether you're walking the aisle, closing a deal, or making your mark — we dress you for the moment that matters.</p>
-        <div class="about-badges">
-          <span class="badge">Wedding Suits</span>
-          <span class="badge">Sherwani</span>
-          <span class="badge">Corporate</span>
-          <span class="badge">Blazers</span>
-          <span class="badge">Indo-Western</span>
-          <span class="badge">Casual Wear</span>
+      <!-- ── Left Column ── -->
+      <div class="features-column">
+
+        <div class="feature-item">
+          <div class="feature-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Tailored to Your Personality</h4>
+            <p>Every outfit is designed to reflect your individuality and unique style.</p>
+          </div>
         </div>
+
+        <div class="feature-item">
+          <div class="feature-badge">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/><path d="M8 12l-2 8 6-4 6 4-2-8"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Fashion for Every Generation</h4>
+            <p>From kids to seniors, we create outfits for all age groups with care.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-badge">
+            <svg viewBox="0 0 24 24"><path d="M6 3h12l1 4H5L6 3z"/><path d="M5 7l2 14h10l2-14"/><path d="M9 7v10M12 7v10M15 7v10"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Premium Fabric Experience</h4>
+            <p>Explore an exclusive range of imported and branded fabrics.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-badge">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Precision in Every Stitch</h4>
+            <p>Expert craftsmanship ensures elegance, comfort, and durability.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-badge">
+            <svg viewBox="0 0 24 24"><path d="M20.38 3.46L16 2l-4 4-4-4-4.38 1.46A2 2 0 0 0 2 5.36V20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5.36a2 2 0 0 0-1.62-1.9z"/><path d="M7 13h10M7 17h6"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>From Casual to Celebrations</h4>
+            <p>Whether daily wear or grand occasions, we have the perfect attire.</p>
+          </div>
+        </div>
+
       </div>
 
+      <!-- ── Center Image ── -->
+      <div class="features-image-wrap">
+        <img src="assets/center-model.png" alt="Men's Designer Studio — Premium Tailoring" class="features-image" />
+      </div>
+
+      <!-- ── Right Column ── -->
+      <div class="features-column">
+
+        <div class="feature-item">
+          <div class="feature-badge">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Where Tradition Meets Modern Fashion</h4>
+            <p>Blending classic craftsmanship with contemporary trends beautifully.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-badge">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Inspired by Global Fashion Standards</h4>
+            <p>Curated collections that bring international fashion closer to you.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-badge">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14l4-4h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/><path d="M8 10h8M8 14h5"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Designed for Every Occasion</h4>
+            <p>Business meetings, weddings, festivals, or casual outings — we've got you covered.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-badge">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Thousands Trust Our Craftsmanship</h4>
+            <p>A growing family of satisfied customers built on quality and trust.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-badge">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Creating Confidence Through Style</h4>
+            <p>We don't just stitch clothes; we help you make lasting impressions.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
+
+  
 
   <!-- ───────── SERVICES ───────── -->
   <section class="services section" id="services">
