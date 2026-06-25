@@ -461,16 +461,31 @@ function initHeroSlideshow() {
   });
 
   const slides = slideshow.querySelectorAll('.hero-slide');
-  if (slides.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (slides.length < 2) return;
 
   let current = 0;
-  const interval = window.setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }, 4500);
+  const prevBtn = document.getElementById('heroPrev');
+  const nextBtn = document.getElementById('heroNext');
 
-  window.addEventListener('beforeunload', () => window.clearInterval(interval));
+  const updateSlide = () => {
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === current);
+    });
+  };
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      updateSlide();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      updateSlide();
+    });
+  }
 }
 
 /* ── A. TYPEWRITER EFFECT ── */
